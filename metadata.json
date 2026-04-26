@@ -1,0 +1,6 @@
+{
+  "name": "TechnoFlow EPS Simulator",
+  "description": "Industrial simulation of Technodinamica EPS cutting line with multi-zone synchronization and optimized cutting logic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

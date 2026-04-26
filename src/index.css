@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    --industrial-bg: #020617; /* slate-950 */
+    --industrial-card: #0f172a; /* slate-900 */
+    --industrial-border: #1e293b; /* slate-800 */
+    --industrial-accent: #6366f1; /* indigo-500 */
+    --industrial-text: #94a3b8; /* slate-400 */
+    --industrial-text-bright: #f8fafc; /* slate-50 */
+    --industrial-danger: #ef4444; /* red-500 */
+    --industrial-success: #10b981; /* emerald-500 */
+  }
+
+  body {
+    background-color: var(--industrial-bg);
+    color: var(--industrial-text);
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  .industrial-panel {
+    background-color: var(--industrial-card);
+    border: 1px solid var(--industrial-border);
+    border-radius: 8px; /* Matching rounded-lg from theme */
+  }
+
+  .lcd-display {
+    background-color: #020617;
+    border: 1px solid var(--industrial-border);
+    font-family: var(--font-mono);
+    color: var(--industrial-success);
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  .status-dot-active {
+    background-color: var(--industrial-success);
+    box-shadow: 0 0 8px var(--industrial-success);
+  }
+}
+
+/* Custom scrollbar for industrial feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--industrial-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--industrial-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4d53;
+}
